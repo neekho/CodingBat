@@ -1,9 +1,80 @@
 package Arrays1;
 
-import java.util.List;
 import java.util.Arrays;
 
 public class Main {
+
+    public static boolean firstLast6(int[] nums) {
+  
+        return nums[0] == 6 || nums[nums.length - 1] == 6;
+    }
+
+
+    public static boolean commonEnd(int[] a, int[] b) {
+  
+        if (a[0] == b[0]) 
+          return true;
+        
+        return a[a.length - 1] == b[b.length - 1];
+    }
+
+
+    public static int[] reverse3(int[] nums) {
+        int[] reversed = new int[nums.length];
+        
+        for (int i = nums.length - 1; i >= 0; i--) {
+              reversed[nums.length - 1 - i] = nums[i];
+        }
+        
+        
+        return reversed;
+    }
+
+
+    public static int[] middleWay(int[] a, int[] b) {
+  
+        return new int[] {a[1], b[1]};
+        
+      }
+      
+    public static boolean no23(int[] nums) {
+
+        if ((nums[0] != 2 && nums[0] != 3) && (nums[1] != 2 && nums[1] != 3)) 
+          return true;
+        
+        
+        return false;
+    }
+
+    public static int[] fix23(int[] nums) {
+  
+        for (int i = 0; i < nums.length - 1; i++) {
+          if (nums[i] == 2 && nums[i + 1] == 3) {
+            nums[i + 1] = 0;
+          }
+        }
+        
+        return nums;
+    }
+      
+      
+    public static int[] makeMiddle(int[] nums) {
+
+        //{7, 1, 2, 3, 4, 9}
+        // returns {2, 3}
+
+        System.out.println(nums.length);
+        if (nums.length % 2 == 0) {
+            //1st element will return 2
+            //2nd element wil return 3
+          return new int[] {nums[(nums.length / 2) - 1], nums[nums.length / 2]};
+        }
+
+
+        return nums;
+    }
+      
+      
 
     public static int[] frontPiece(int[] nums) {
   
@@ -29,86 +100,82 @@ public class Main {
       
 
 
-
-    public static int[] makeLast(int[] nums) {
-
-        /* 
-            Given an int array, return a new array with 
-            double the length where its last element is the same as the original array, 
-            and all the other elements are 0. 
-            The original array will be length 1 or more. 
-            Note: by default, a new int array contains all 0's.
-
-            makeLast([4, 5, 6]) → [0, 0, 0, 0, 0, 6]
-            makeLast([1, 2]) → [0, 0, 0, 2]
-            makeLast([3]) → [0, 3]
-         */
-
-
-        int[] res = new int[nums.length * 2];
-    
-        // set the last element to whatever is the last element in the nums parameter.
-        res[res.length - 1] = nums[nums.length - 1];
-
-
-        return res;
-      }
-
-    public static int[] makeMiddle(int[] nums) {
-
-        //{7, 1, 2, 3, 4, 9}
-        // returns {2, 3}
-
-        System.out.println(nums.length);
-        if (nums.length % 2 == 0) {
-            //1st element will return 2
-            //2nd element wil return 3
-          return new int[] {nums[(nums.length / 2) - 1], nums[nums.length / 2]};
+    public static int[] midThree(int[] nums) {
+        
+        // kinda challenging challenges goes here
+        
+        if ((nums.length != 3) &&  nums.length % 2 != 0 ) {
+            
+            int first = nums[(nums.length / 2) - 1];
+            int second = nums[(nums.length / 2)];
+            int third = nums[(nums.length / 2) + 1];
+            
+            return new int[] {first, second, third};
         }
+        
+        
+            return nums;
 
-
-        return nums;
     }
 
-    public static boolean sameFirstLast(int[] nums) {
+
+    public static boolean unlucky1(int[] nums) {
+        // fails 1 unit test 
+        //unlucky1([1, 1, 1, 3, 1]) → false	| run: true
         
-
-        /*
-            Given an array of ints, return true if the array is length 1 or more, 
-            and the first element and the last element are equal.
-
-            sameFirstLast([1, 2, 3]) → false
-            sameFirstLast([1, 2, 3, 1]) → true
-            sameFirstLast([1, 2, 1]) → true
-
-        */
-
-
-        if (nums.length > 1 && nums[0] == nums[nums.length - 1]){
+        for (int i = 0; i < nums.length - 1; i++) {
+          if (nums[i] == 1 && nums[i + 1] == 3 )
             return true;
         }
-
-
+        
         return false;
+        
+      }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      // 2ND COLUMN
+
+    public static boolean sameFirstLast(int[] nums) {
+  
+        if (nums.length >= 1 && nums[0] == nums[nums.length - 1])
+            return true;
+      
+      
+        return false;
+        
+      }
+
+
+    public static int sum3(int[] nums) {
+  
+        int sum = 0;
+        
+        for(int numbers: nums) 
+          sum += numbers;
+        
+        
+        return sum;
+        
     }
 
 
     public static int[] maxEnd3(int[] nums) {
-        /*
-         
-            Given an array of ints length 3, figure out which is larger, 
-            the first or last element in the array, and set all the other elements to be that value. 
-            Return the changed array.
-
-            maxEnd3([1, 2, 3]) → [3, 3, 3]
-            maxEnd3([11, 5, 9]) → [11, 11, 11]
-            maxEnd3([2, 11, 3]) → [3, 3, 3]
-         */
-
-
+   
          int firstNumber = nums[0];
          int lastNumber = nums[nums.length - 1];
-
 
          boolean firstGreater = firstNumber > lastNumber;
          
@@ -128,67 +195,59 @@ public class Main {
                 return nums;
              */
     }
-    
-    
-
-    public static void main(String[] args) {
-
-        System.out.println(sameFirstLast(new int[] {1,2,3}));
-        System.out.println(sameFirstLast(new int[] {1,2,1}));
-
-        int[] newArr = maxEnd3(new int[] {1,2,3});
-        int[] newArr2 = maxEnd3(new int[] {11,2,3});
-
-        System.out.println(Arrays.toString(newArr));
-        System.out.println(Arrays.toString(newArr2));
-
-        int[] middleThree = midThree(new int[] {1,2,3,4,5});
-
-        System.out.println(Arrays.toString(middleThree));
 
 
+    public static int[] makeEnds(int[] nums) {
+        int[] firstLast = new int[2];
         
+        firstLast[0] = nums[0];
+        firstLast[1] = nums[nums.length - 1];
+        
+        return firstLast;
     }
 
+
+    public static int[] makeLast(int[] nums) {
+
+        int[] res = new int[nums.length * 2];
     
-    // kinda challenging challenges goes here
+        // set the last element to whatever is the last element in the nums parameter.
+        res[res.length - 1] = nums[nums.length - 1];
 
-    public static int[] midThree(int[] nums) {
 
-        /*
-         
-            Given an array of ints of odd length, return a new array length 3 containing the elements 
-            from the middle of the array. The array length will be at least 3.
+        return res;
+    }
 
-                midThree([1, 2, 3, 4, 5]) → [2, 3, 4]
-                midThree([8, 6, 7, 5, 3, 0, 9]) → [7, 5, 3]
-                midThree([1, 2, 3]) → [1, 2, 3]
-         */
-    
-        
-        if ((nums.length != 3) &&  nums.length % 2 != 0 ) {
-            
-            int first = nums[(nums.length / 2) - 1];
-            int second = nums[(nums.length / 2)];
-            int third = nums[(nums.length / 2) + 1];
-            
-            return new int[] {first, second, third};
+
+
+    public static int start1(int[] a, int[] b) {
+  
+        int count = 0;
+      
+        if (a.length > 0 && a[0] == 1) {
+            count++;
         }
-        
-        
-            return nums;
-
+      
+        if (b.length > 0 && b[0] == 1) {
+            count++;
         }
-
-
-    public static int maxTriple(int[] nums) {
-        /*    
-            Given an array of ints of odd length, look at the first, last, and middle values in the array and return the largest. The array length will be a least 1.
+      
+        return count;
+        
+    }
+      
+    public static int[] plusTwo(int[] a, int[] b) {
+        int[] newArray = new int [4];
+        
+        for (int i = 0; i < 2; i++) {
+            newArray[i] = a[i];
+            newArray[i + 2] = b[i];
+        }
             
-                maxTriple([1, 2, 3]) → 3
-                maxTriple([1, 5, 3]) → 5
-                maxTriple([5, 2, 3]) → 5
-         */
+        return newArray; 
+    }
+
+    public static int maxTriple(int[] nums) {       
 
         if (nums.length == 2) {
             return Math.max(nums[0], nums[1]);
@@ -216,6 +275,67 @@ public class Main {
         }
 
         return nums[0];
+    }
+
+    public int[] make2(int[] a, int[] b) {
+        // not done
+        if (a.length >= 2)
+          return a;
+      
+        if (b.length >= 2)
+          return b;
+      
+        return new int[]{a[0], b[0]};
+        /*if (a.length == 2 && b.length == 0)
+          return a;
+          
+        if (b.length == 2 && a.length == 0)
+          return b;
+          
+        
+        
+        int[] newArr = new int[2];
+        newArr[0] = a[0];
+        newArr[1] = b[0];
+        
+        
+        return newArr;*/
+    }
+
+
+
+
+
+
+
+
+
+    // 3RD COLUMN
+
+
+      
+    
+    
+
+    public static void main(String[] args) {
+
+        System.out.println(sameFirstLast(new int[] {1,2,3}));
+        System.out.println(sameFirstLast(new int[] {1,2,1}));
+
+        int[] newArr = maxEnd3(new int[] {1,2,3});
+        int[] newArr2 = maxEnd3(new int[] {11,2,3});
+
+        System.out.println(Arrays.toString(newArr));
+        System.out.println(Arrays.toString(newArr2));
+
+        int[] middleThree = midThree(new int[] {1,2,3,4,5});
+
+        System.out.println(Arrays.toString(middleThree));
+
+
+        
+    }
+
+
+
 }
-
-
