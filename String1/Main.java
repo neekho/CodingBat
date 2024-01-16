@@ -74,8 +74,6 @@ public class Main {
     }
 
     public static String extraFront(String str) {
-
-  
   
         if (str.length() >= 2) 
           return str.substring(0,2) + str.substring(0,2) + str.substring(0,2);
@@ -97,7 +95,54 @@ public class Main {
           
         return str.substring(0,1);
     }
+
+    public static String extraEnd(String str) {
+  
+        if (str.length() > 3) {
+          String end = str.substring(str.length() - 2);
+          return end + end + end;
+        }
+            
+        return str + str + str;
+    }
+
+
+    public static String withoutEnd(String str) {
+        return str.substring(1, str.length() - 1);
+    }
       
+      
+      
+    public static String withouEnd2(String str) {
+  
+        if (str.length() <= 1) {
+          return "";
+        }
+        
+        
+        return str.substring(1, str.length() - 1); 
+    }
+
+    public static String nTwice(String str, int n) {
+        return "";
+    }
+    
+
+
+
+
+    public static boolean hasBad(String str) {
+  
+        if (str.length() >= 3 && str.substring(0, 3).equals("bad")) {
+             return true;
+         }
+     
+         if (str.length() >= 4 && str.substring(1, 4).equals("bad")) {
+             return true;
+         }
+     
+         return false;
+    }
       
 
 
