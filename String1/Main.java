@@ -113,7 +113,7 @@ public class Main {
       
       
       
-    public static String withouEnd2(String str) {
+    public static String withoutEnd2(String str) {
   
         if (str.length() <= 1) {
           return "";
@@ -143,9 +143,102 @@ public class Main {
      
          return false;
     }
+
+
+    public static String conCat(String a, String b) {
+                // NOT DONE
+
+        return "";
+    }
+
+    public boolean frontAgain(String str) {
+  
+        if (str.length() >= 2) {
+          String end = str.substring(str.length() - 2);
+      
+          return str.substring(0,2).equals(end);
+        }
+        
+        return false;
+    }
+      
+    public static String without2(String str) {
+        // NOT DONE
+
+        return "";
+    }
+    
+
+    public static String withoutX(String str) {
+        // NOT DONE
+        String first = str.substring(0, 1);
+        String last = str.substring(str.length() - 1);
+
+        if (first.equals("x")) {
+            return str.substring(1);
+        }
+        
+        if (last.equals("x")) {
+            return str.substring(0, str.length() - 1);
+        }
+
+        return str;
+    }
       
 
 
+
+
+
+
+
+    // 3rd column
+
+
+
+
+
+
+    public static String makeTags(String tag, String word) {
+        return "<" + tag + ">" + word + "</" + tag + ">";
+      }
+      
+
+    public static String firstTwo(String str) {
+  
+        if (str.length() == 1) {
+          return str.substring(0);
+        }
+        
+        if (str.length() >= 2) {
+          return str.substring(0, 2);
+        }
+        
+        return "";
+    }
+
+    public static String comboString(String a, String b) {
+  
+        if (a.length() > b.length()) {
+            return b + a + b;
+      
+        } 
+        
+        
+        
+        return a + b + a;
+      }
+      
+
+    public static String middleTwo(String str) {
+  
+        if (str.length() >= 4) {
+          return str.substring((str.length() / 2) - 1, (str.length() / 2) + 1);
+        }
+        
+        return str;
+    }
+      
     
     
      
