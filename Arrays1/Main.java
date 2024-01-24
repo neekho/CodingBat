@@ -76,28 +76,7 @@ public class Main {
       
       
 
-    public static int[] frontPiece(int[] nums) {
-  
-        int[] newArray = new int[2];
-      
-        if (nums.length == 0)
-          return nums;
-        
-        if (nums.length <= 2)
-        
-          return nums;
-          
-        
-        for (int i = 0; i <= 2; i++) {
-            System.out.println(i);
-            newArray[i] = nums[i];
-            // System.out.println(newArray[i]);
 
-        }
-          
-        return nums;
-      }
-      
 
 
     public static int[] midThree(int[] nums) {
@@ -312,6 +291,109 @@ public class Main {
 
     // 3RD COLUMN
 
+    public static int[] makePi() {
+      return new int[] {3,1,4};
+    }
+
+
+    public static int[] rotateLeft3(int[] nums) {
+      int first = nums[0];
+      int second = nums[1];
+      int third = nums[2];
+      
+      return new int[] {second, third, first};
+      
+    }
+
+
+    public static boolean has23(int[] nums) {
+  
+      boolean firstEqual = nums[0] == 2 || nums[0] == 3; 
+      boolean secondEqual = nums[1] == 2 || nums[1] == 3; 
+
+  
+      
+      return firstEqual || secondEqual;
+
+    }
+
+    public static boolean double23(int[] nums) {
+  
+      if (nums.length >= 2) {
+        return nums[0] == nums[1] && (nums[0] == 2 || nums[0] == 3);
+    
+      }
+      
+      return false;
+    }
+    
+
+    public static int[] biggerTwo(int[] a, int[] b) {
+  
+      int aSum = a[0] + a[1];
+      int bSum = b[0] + b[1];
+      
+      boolean firstGreater = aSum > bSum;
+      boolean secondGreater = bSum > aSum;
+      
+      
+      if (firstGreater)
+        return a;
+        
+      else if (secondGreater)
+        return b;
+        
+      return a;
+      
+    }
+    
+    public static int[] swapEnds(int[] nums) {
+  
+      int firstNum = nums[0];
+      int lastNum = nums[nums.length - 1];
+      
+      nums[0] = lastNum;  
+      nums[nums.length - 1] = firstNum;
+      
+      return nums;
+      
+    }
+
+    public static int[] frontPiece(int[] nums) {
+  
+  
+      if (nums.length == 0)
+        return nums;
+      
+      if (nums.length <= 2)
+      
+        return nums;
+        
+      
+
+        
+      return new int[] {nums[0], nums[1]};
+    }
+
+
+    public static int[] front11(int[] a, int[] b) {
+  
+      if (a.length == 0 && b.length == 0)
+        return new int[] {};
+      
+      if (b.length == 0)
+        return new int[] {a[0]};
+      
+      if (a.length == 0)
+        return new int[] {b[0]};
+      
+    
+      
+      return new int[] {a[0], b[0]};
+    }
+    
+    
+
 
       
     
@@ -333,7 +415,12 @@ public class Main {
         System.out.println(Arrays.toString(middleThree));
 
 
-        
+        System.out.println(double23(new int[] {2 ,3}));
+        System.out.println(double23(new int[] {5 ,5}));
+
+
+        System.out.println(Arrays.toString(frontPiece(new int[] {2,8,5,6})));
+
     }
 
 
