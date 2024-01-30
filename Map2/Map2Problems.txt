@@ -1,0 +1,44 @@
+1. public Map<String, Integer> word0(String[] strings) ->
+
+    Given an array of strings, return a Map<String, Integer> containing a key for every different string in the array, 
+    always with the value 0. For example the string "hello" makes the pair "hello":0. 
+    We'll do more complicated counting later, but for this problem the value is simply 0.
+
+
+        word0(["a", "b", "a", "b"]) → {"a": 0, "b": 0}
+        word0(["a", "b", "a", "c", "b"]) → {"a": 0, "b": 0, "c": 0}
+        word0(["c", "b", "a"]) → {"a": 0, "b": 0, "c": 0}
+
+
+2. public Map<String, Integer> wordCount(String[] strings) ->
+
+    The classic word-count algorithm: given an array of strings, return a Map<String, Integer> 
+    with a key for each different string, with the value the number of times that string appears in the array.
+
+
+        wordCount(["a", "b", "a", "c", "b"]) → {"a": 2, "b": 2, "c": 1}
+        wordCount(["c", "b", "a"]) → {"a": 1, "b": 1, "c": 1}
+        wordCount(["c", "c", "c", "c"]) → {"c": 4}
+
+
+
+3. public Map<String, Boolean> wordMultiple(String[] strings) ->
+
+    Given an array of strings, return a Map<String, Boolean> where each different string is a key and its value is true 
+    if that string appears 2 or more times in the array.
+
+
+        wordMultiple(["a", "b", "a", "c", "b"]) → {"a": true, "b": true, "c": false}
+        wordMultiple(["c", "b", "a"]) → {"a": false, "b": false, "c": false}
+        wordMultiple(["c", "c", "c", "c"]) → {"c": true}
+
+
+4. public Map<String, Integer> wordLen(String[] strings) ->
+
+    Given an array of strings, return a Map<String, Integer> containing 
+    a key for every different string in the array, and the value is that string's length.
+
+
+        wordLen(["a", "bb", "a", "bb"]) → {"bb": 2, "a": 1}
+        wordLen(["this", "and", "that", "and"]) → {"that": 4, "and": 3, "this": 4}
+        wordLen(["code", "code", "code", "bug"]) → {"code": 4, "bug": 3}

@@ -73,6 +73,24 @@ public class Main {
     
 
     // 4
+    public static Map<String, String> mapShare(Map<String, String> map) {
+        
+        boolean aValue = map.containsKey("a") && map.get("a") != null;
+
+        if (aValue) {
+            map.put("b", map.get("a"));
+        }
+
+        map.remove("c");
+
+
+        return map;
+    }
+    
+
+
+
+
     
 
     // 5 
@@ -109,6 +127,65 @@ public class Main {
 
         return map;
   
+    }
+
+    //7
+    public static Map<String, String> mapAB(Map<String, String> map) {
+        
+        boolean bothPresent = map.containsKey("a") && map.containsKey("b");
+
+        if (bothPresent)
+            map.put("ab", map.get("a") + map.get("b"));
+
+        return map;
+    }
+    
+    
+
+    // 8
+    public static Map<String, String> topping3(Map<String, String> map) {
+
+        boolean potato = map.get("potato") != null;
+        boolean salad = map.get("salad") != null;
+
+
+        if (potato)
+            map.put("fries", map.get("potato"));
+
+        
+        if (salad)
+            map.put("spinach", map.get("salad"));
+
+
+        return map;
+  
+    }
+    
+
+    // 9
+    public Map<String, String> mapAB4(Map<String, String> map) {
+        
+        boolean aPresent = map.get("a") != null;
+        boolean bPresent = map.get("b") != null;
+
+        if (aPresent && bPresent) {
+            String a = map.get("a");
+            String b = map.get("b");
+
+            if (a.length() == b.length()) {
+                map.put("a", "");
+                map.put("b", "");
+            }
+
+            else if (a.length() > b.length()) 
+                map.put("c", a);
+
+            else 
+                map.put("c", b);
+
+        }
+
+        return map;
     }
     
     
