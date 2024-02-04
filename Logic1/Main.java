@@ -48,6 +48,11 @@ public class Main {
     }
 
     // 4
+    public static boolean old35(int n) {
+      //return n % 3 == 0 || n % 5 == 0;
+      return (n % 3 == 0 && n % 5 != 0) || (n % 3 != 0 && n % 5 == 0);
+    
+    }
 
 
     // 5 
