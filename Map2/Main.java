@@ -1,5 +1,6 @@
 package Map2;
 
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -120,10 +121,38 @@ public class Main {
     // 6
     public static String[] allSwap(String[] strings) {
 
+        // allSwap(["ax", "bx", "cx", "cy", "by", "ay", "aaa", "azz"]) → 
+        //["ay", "by", "cy", "cx", "bx", "ax", "azz", "aaa"]
 
+        Map<String, Integer> map = new HashMap<>();
+
+        System.out.println(Arrays.toString(strings));
+
+
+        for (int i = 0; i < strings.length; i++) {
+            // Extract the first character of the current string
+            String firstChar = strings[i].substring(0, 1);
+
+
+            if (map.containsKey(firstChar)) { // If the first character is already in the map, perform a swap
+                
+                int indexToSwap = map.get(firstChar);
+
+                swap(strings, indexToSwap, i);
+
+                // Remove the key from the map as it won't match anything in the future
+                System.out.println(Arrays.toString(strings));
+                map.remove(firstChar);
+
+            } else {
+                // If the first character is not in the map, add it along with its index
+                map.put(firstChar, i);
+
+            }
+        }
 
         return strings;
-  
+      
     }
 
 
@@ -169,6 +198,53 @@ public class Main {
         return result;
   
     }
+
+
+    //9
+    public static String[] firstSwap(String[] strings) {
+
+        Map<String, Integer> map = new HashMap<>();
+
+        for (int iteration = 0; iteration < strings.length; iteration++) {
+
+            boolean notEmpty = strings[iteration] != null;
+            String firstLetter = strings[iteration].substring(0, 1);
+
+            if (notEmpty && map.containsKey(firstLetter)) {
+                
+                int match  = map.get(firstLetter);
+
+                if (strings[match] != null && strings[iteration] != null) {
+
+                    String temp = strings[match];
+
+                    strings[match] = strings[iteration];
+
+                    strings[iteration] = temp;
+                }
+
+            }
+
+            else {
+                map.put(firstLetter, iteration);
+            }
+
+
+        }
+
+        return strings;
+  
+    }
+    
+
+
+    // Swap two elements in the array 6th problem
+    private static void swap(String[] strings, int i, int j) {
+        String temp = strings[i];
+        strings[i] = strings[j];
+        strings[j] = temp;
+    }
+    
     
     
     
@@ -202,6 +278,19 @@ public class Main {
         String[] wordAppendArray = {"a", "b", "a"};
         String wordAppendMap = wordAppend(wordAppendArray);
 
-        System.out.println(wordAppendMap);
+        System.out.println(wordAppendMap); 
+        System.out.println();
+
+
+
+         // Test cases
+        String[] input1 = {"ab", "ac"};
+        String[] input2 = {"ax", "bx", "cx", "cy", "by", "ay", "aaa", "azz"};
+        String[] input3 = {"ax", "bx", "ay", "by", "ai", "aj", "bx", "by"};
+
+        System.out.println("ALL SWAP");
+        System.out.println(Arrays.toString(allSwap(input1))); // Output: ["ac", "ab"]
+        System.out.println(Arrays.toString(allSwap(input2))); // Output: ["ay", "by", "cy", "cx", "bx", "ax", "azz", "aaa"]
+        System.out.println(Arrays.toString(allSwap(input3))); // Output: ["ay", "by", "ax", "bx", "aj", "ai", "by", "bx"]
     }
 }
