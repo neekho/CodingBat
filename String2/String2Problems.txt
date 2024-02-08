@@ -1,0 +1,49 @@
+1 public String doubleChar(String str) ->
+
+    Given a string, return a string where for every char in the original, there are two chars.
+
+
+        doubleChar("The") → "TThhee"
+        doubleChar("AAbb") → "AAAAbbbb"
+        doubleChar("Hi-There") → "HHii--TThheerree"
+
+
+
+
+2 public int countCode(String str) ->
+
+    Return the number of times that the string "code" appears anywhere in the given string, 
+    except we'll accept any letter for the 'd', so "cope" and "cooe" count.
+
+
+        countCode("aaacodebbb") → 1
+        countCode("codexxcode") → 2
+        countCode("cozexxcope") → 2
+
+
+3. public boolean bobThere(String str) ->
+    
+    Return true if the given string contains a "bob" string, but where the middle 'o' char can be any char.
+
+        bobThere("abcbob") → true
+        bobThere("b9b") → true
+        bobThere("bac") → false
+
+
+
+4. public String repeatEnd(String str, int n) ->
+
+    Given a string and an int n, return a string made of n repetitions of the last n characters of the string. 
+    You may assume that n is between 0 and the length of the string, inclusive.
+
+        repeatEnd("Hello", 3) → "llollollo"
+        repeatEnd("Hello", 2) → "lolo"
+        repeatEnd("Hello", 1) → "o"
+
+
+7. public int countHi(String str) -> 
+    Return the number of times that the string "hi" appears anywhere in the given string.
+
+        countHi("abc hi ho") → 1
+        countHi("ABChi hi") → 2
+        countHi("hihi") → 2
