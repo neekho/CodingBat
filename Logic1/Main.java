@@ -1,7 +1,12 @@
 package Logic1;
 
+import java.util.Arrays;
+
 public class Main {
 
+    // 1ST COLUMN
+
+    // 1
     public static boolean cigarParty(int cigars, boolean isWeekend) {
 
         if (isWeekend)
@@ -12,18 +17,54 @@ public class Main {
 
 
 
-
-
-
-
+    // 2
 
     
-      
+
+
+    // 3
     public static boolean love6(int a, int b) {
  
         return (a == 6 || b == 6 || a + b == 6 || Math.abs(a - b) == 6);
         
       }
+
+
+
+
+
+
+
+
+
+    // 7
+    public static boolean twoAsOne(int a, int b, int c) {
+  
+      // int[] nums = {a, b, c};
+      // Arrays.sort(nums);
+
+      // return nums[0] + nums[1] == nums[2];
+      // OR
+
+      if (a + b == c)
+      return true;
+      
+      if (b + c == a)
+        return true;
+        
+        
+      if (a + c == b)
+        return true;
+    
+    
+      return false;
+        
+      
+      
+    }
+
+
+    
 
 
     

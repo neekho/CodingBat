@@ -10,14 +10,13 @@
         cigarParty(50, false) → true
         cigarParty(70, true) → true
 
+2.
 
 
 
 
 
 
-
-        
 
 
 3. public boolean love6(int a, int b) -> 
@@ -31,9 +30,32 @@
         love6(1, 5) → true
 
 
+4.
+
+5.
+
+6.
+
+7. public boolean twoAsOne(int a, int b, int c) ->
+    Given three ints, a b c, return true if it is possible to add two of the ints to get the third.
+        twoAsOne(1, 2, 3) → true
+        twoAsOne(3, 1, 2) → true
+        twoAsOne(3, 2, 2) → false
+
+
+8.
+
+
+
+9.
+
+10.
 
 
 // 2nd Column
+
+
+1. 
 
 2. public int sortaSum(int a, int b) ->
 
