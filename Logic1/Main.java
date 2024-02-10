@@ -18,6 +18,20 @@ public class Main {
 
 
     // 2
+    public int caughtSpeeding(int speed, boolean isBirthday) {
+      if (speed <= 60) 
+        return 0;
+      
+      else if ((isBirthday) && speed >= 61 || speed <= 80) 
+        return 1;
+      
+      else if (speed >= 81) 
+        return 2;
+    
+    
+    return 0;
+   }
+  
 
     
 
@@ -31,6 +45,15 @@ public class Main {
 
 
 
+    // 4
+    public boolean more20(int n) {
+      if (n % 20 == 1 || n % 20 == 2) {
+        return true;
+      }
+
+      return false;
+  
+    }
 
 
 
