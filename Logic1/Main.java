@@ -87,6 +87,23 @@ public class Main {
     }
 
 
+    // 8
+    public static boolean lastDigit(int a, int b, int c) {
+      int first = a % 10;
+      int sec = b % 10;
+      int third = c % 10;
+
+
+      return first == sec || sec == third || first == third;
+
+
+
+
+
+
+    }
+
+
     
 
 
