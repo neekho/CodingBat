@@ -125,6 +125,53 @@ public class Main {
 
     }
 
+    // 9
+    public static int maxMod5(int a, int b) {
+
+      int aRemainder = a % 5;
+      int bRemainder = b % 5;
+      
+      if (a == b)
+        return 0;
+
+
+      if (aRemainder == bRemainder) 
+        return Math.min(aRemainder, bRemainder);
+      
+
+      return Math.max(a, b);
+  
+    }
+
+
+    // 10
+    public static int blueTicket(int a, int b, int c) {
+
+      int pairOne = a + b;
+      int pairTwo = b + c;
+      int pairThree = a + c;
+
+      boolean sum10 = pairOne == 10 || pairTwo == 10 || pairThree == 10;
+
+    
+      if (sum10) // if one of the pairs are summed to 10
+        return 10;
+      
+      //blueTicket(15, 0, 5) → 5
+      // pairOne = a + b = 15
+      // pairTwo = b + c = 5
+      // pairThree = a + c = 20
+
+      // 15 - 5 = 10 so it returned 5
+      // 15 - 20 = -5 disregard by run time
+      else if (pairOne - pairTwo == 10 || pairOne - pairThree == 10)
+        return 5;
+      
+      return 0;
+    }
+    
+    
+
 
     
 
