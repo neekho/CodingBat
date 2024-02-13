@@ -179,6 +179,23 @@ public class Main {
     
     // 2nd column
 
+    // 1
+    public static int dateFashion(int you, int date) {
+
+      int result = 1;
+
+      if (you <= 2 || date <= 2)
+        result = 0;
+
+
+      if (you >= 8 || date >= 8)
+        result = 2;
+
+      return result;
+  
+    }
+    
+
     
     //2. 
     public static int sortaSum(int a, int b) {
@@ -244,6 +261,48 @@ public class Main {
     
     return b > a && c > b;
   }
+
+  // 8
+
+
+  // 9
+  public static int redTicket(int a, int b, int c) {
+
+    int result = 0;
+
+    boolean all2 = a == 2 && b == 2 && c == 2;
+
+    boolean allSame = a == b && b == c && a == c;
+
+    boolean notA = b != a && c != a;
+    
+
+    if (allSame && !all2) result = 5;
+
+
+    else if (all2) result = 10;
+
+
+    else if (notA) result = 1;
+
+
+
+    return result;
+  
+  }
+  
+
+
+  // 10
+  public static boolean shareDigit(int a, int b) {
+
+    int firstDigit = a / 10;
+    int lastDigit = b % 10;
+
+    return firstDigit == lastDigit;
+  
+  }
+  
   
       
     

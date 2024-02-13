@@ -118,10 +118,32 @@
         blueTicket(6, 1, 4) → 10
 
 
+
+
+
+
+
+
+
+
+
+
+
+
 // 2nd Column
 
 
-1. 
+1. public int dateFashion(int you, int date) ->
+
+    You and your date are trying to get a table at a restaurant. The parameter "you" is the stylishness of your clothes, 
+    in the range 0..10, and "date" is the stylishness of your date's clothes.
+    The result getting the table is encoded as an int value with 0=no, 1=maybe, 2=yes. If either of you is very stylish, 8 or more, 
+    then the result is 2 (yes). With the exception that if either of you has style of 2 or less, then the result is 0 (no).
+    Otherwise the result is 1 (maybe).
+
+        dateFashion(5, 10) → 2
+        dateFashion(5, 2) → 0
+        dateFashion(5, 5) → 1
 
 2. public int sortaSum(int a, int b) ->
 
@@ -183,4 +205,34 @@
         inOrder(1, 2, 1, false) → false
         inOrder(1, 1, 2, true) → true
 
-    
+
+8. public boolean lessBy10(int a, int b, int c) ->
+
+    Given three ints, a b c, return true if one of them is 10 or more less than one of the others.
+
+        lessBy10(1, 7, 11) → true
+        lessBy10(1, 7, 10) → false
+        lessBy10(11, 1, 7) → true
+
+
+
+9. public int redTicket(int a, int b, int c) ->
+
+    You have a red lottery ticket showing ints a, b, and c, each of which is 0, 1, or 2. 
+    If they are all the value 2, the result is 10. Otherwise if they are all the same, the result is 5. 
+    Otherwise so long as both b and c are different from a, the result is 1. Otherwise the result is 0.
+
+        redTicket(2, 2, 2) → 10
+        redTicket(2, 2, 1) → 0
+        redTicket(0, 0, 0) → 5
+
+
+
+10. public boolean shareDigit(int a, int b) ->
+
+    Given two ints, each in the range 10..99, return true if there is a digit that appears in both numbers, such as the 2 in 12 and 23. 
+    (Note: division, e.g. n/10, gives the left digit while the % "mod" n%10 gives the right digit.)
+
+        shareDigit(12, 23) → true
+        shareDigit(12, 43) → false
+        shareDigit(12, 44) → false
