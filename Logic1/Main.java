@@ -296,10 +296,15 @@ public class Main {
   // 10
   public static boolean shareDigit(int a, int b) {
 
-    int firstDigit = a / 10;
-    int lastDigit = b % 10;
+    int firstDigitA = a / 10;
+    
+    int firstDigitB = b / 10;
+    
+    int lastDigitA = a % 10;
+    
+    int lastDigitB = b % 10;
 
-    return firstDigit == lastDigit;
+    return firstDigitA == firstDigitB || lastDigitA == lastDigitB || firstDigitA == lastDigitB || firstDigitB == lastDigitA;
   
   }
   
