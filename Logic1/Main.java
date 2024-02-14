@@ -307,6 +307,26 @@ public class Main {
     return firstDigitA == firstDigitB || lastDigitA == lastDigitB || firstDigitA == lastDigitB || firstDigitB == lastDigitA;
   
   }
+
+
+
+  // 3rd c
+
+  // 1
+  public static boolean squirrelPlay(int temp, boolean isSummer) {
+    if (temp >= 60 && temp <= 90) 
+      return true;
+    
+    else if (isSummer && (temp>= 60 && temp <= 100)) 
+     return true;
+    
+    
+    
+    return false;
+
+    // alternate     return (temp >= 60 && temp <= 90) || (isSummer && temp >= 60 && temp <= 100);
+
+  }
   
   
       
