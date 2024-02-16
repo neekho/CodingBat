@@ -327,6 +327,29 @@ public class Main {
     // alternate     return (temp >= 60 && temp <= 90) || (isSummer && temp >= 60 && temp <= 100);
 
   }
+
+
+  public static String alarmClock(int day, boolean vacation) {
+
+    boolean isWeekend = day == 0 || day == 6;
+
+    if (isWeekend)
+      return "10:00";
+
+
+    else if (vacation && !isWeekend)
+      return "10:00";
+
+
+    else if (vacation && isWeekend)
+     return "off";
+
+
+
+    return "7:00";
+  
+  }
+  
   
   
       
