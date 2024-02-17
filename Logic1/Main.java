@@ -310,7 +310,7 @@ public class Main {
 
 
 
-  // 3rd c
+  // 3rd column
 
   // 1
   public static boolean squirrelPlay(int temp, boolean isSummer) {
@@ -328,23 +328,19 @@ public class Main {
 
   }
 
-
+  // 2
   public static String alarmClock(int day, boolean vacation) {
 
     boolean isWeekend = day == 0 || day == 6;
 
-    if (isWeekend)
+    if (vacation && !isWeekend)
       return "10:00";
-
-
-    else if (vacation && !isWeekend)
-      return "10:00";
-
 
     else if (vacation && isWeekend)
      return "off";
 
-
+    else if (isWeekend)
+      return "10:00";
 
     return "7:00";
   
@@ -352,7 +348,89 @@ public class Main {
   
   
   
+  // 3 
+  public static boolean specialEleven(int n) {
+    return n % 11 == 0 || n % 11 == 1;
+  }
+  
+
+  // 4
+  public static boolean less20(int n) {
+    return n % 20 == 18 || n % 20 == 19;
+
+  }
+
+
+
+
+  // 5
+  public static boolean answerCell(boolean isMorning, boolean isMom, boolean isAsleep) {
+
+  
+    if (isAsleep)
+      return false;
+  
+    else if (isMom && isMorning)
+      return true;
       
+    else if (isMorning)
+      return false;
+
+    return true;
+
+    // alternatively, 
+    /*
+          if (isAsleep) {
+            return false;
+          }
+      
+          if (isMorning && !isMom) {
+            return false;
+          }
+      
+        return true;
+      
+    */ 
+  
+  }
+
+  // 6
+  public static String fizzString2(int n) {
+
+
+    boolean fizz = n % 3 == 0;
+    boolean buzz = n % 5 == 0;
+
+    if (fizz && buzz) 
+      return "FizzBuzz!";
+
+    else if (fizz)
+      return "Fizz!";
+
+    else if (buzz)
+      return "Buzz!";
+
+    return n + "!";
+  }
+
+
+
+  // 7
+  public static boolean inOrderEqual(int a, int b, int c, boolean equalOk) {
+
+  
+    if (equalOk) 
+       return (a <= b && b <= c); // 5,5,7, true, -> true
+    
+    else 
+        return (a < b && b < c); // if its ascending order return true // 5,5,7 false, -> false
+    
+  }
+  
+  
+
+
+  
     
     public static void main(String[] args) {
         

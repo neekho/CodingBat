@@ -294,13 +294,19 @@
         answerCell(true, false, false) → false
 
 
-6 public String alarmClock(int day, boolean vacation) ->
 
-    Given a day of the week encoded as 0=Sun, 1=Mon, 2=Tue, 3=WED, 4=TH, 5=FRI ...6=Sat, and a boolean indicating if we are on vacation, 
-    return a string of the form "7:00" indicating when the alarm clock should ring. 
-    Weekdays, the alarm should be "7:00" and on the weekend it should be "10:00". 
-    Unless we are on vacation -- then on weekdays it should be "10:00" and weekends it should be "off".
 
-        alarmClock(1, false) → "7:00"
-        alarmClock(5, false) → "7:00"
-        alarmClock(0, false) → "10:00"
+6. public String fizzString2(int n) ->
+
+    Given an int n, return the string form of the number followed by "!". 
+    So the int 6 yields "6!". Except if the number is divisible by 3 use "Fizz" instead of the number, 
+    and if the number is divisible by 5 use "Buzz", and if divisible by both 3 and 5, 
+    use "FizzBuzz". Note: the % "mod" operator computes the remainder after division, so 23 % 10 yields 3. 
+    What will the remainder be when one number divides evenly into another?
+
+        fizzString2(1) → "1!"
+        fizzString2(2) → "2!"
+        fizzString2(3) → "Fizz!"
+
+
+7. 
