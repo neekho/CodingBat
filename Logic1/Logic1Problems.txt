@@ -309,4 +309,29 @@
         fizzString2(3) → "Fizz!"
 
 
-7. 
+7. public boolean inOrderEqual(int a, int b, int c, boolean equalOk) ->
+
+    Given three ints, a b c, return true if they are in strict increasing order, such as 2 5 11, or 5 6 7, 
+    but not 6 5 7 or 5 5 7. However, with the exception that if "equalOk" is true, equality is allowed, 
+    such as 5 5 7 or 5 5 5.
+
+
+        inOrderEqual(2, 5, 11, false) → true
+        inOrderEqual(5, 7, 6, false) → false
+        inOrderEqual(5, 5, 7, true) → true
+
+
+8.
+
+
+9. public int greenTicket(int a, int b, int c) ->
+
+    You have a green lottery ticket, with ints a, b, and c on it. 
+    If the numbers are all different from each other, the result is 0. 
+    If all of the numbers are the same, the result is 20. 
+    If two of the numbers are the same, the result is 10.
+
+
+        greenTicket(1, 2, 3) → 0
+        greenTicket(2, 2, 2) → 20
+        greenTicket(1, 1, 2) → 10
