@@ -444,7 +444,7 @@ public class Main {
 
     } else if (!sameResult && noDoubles) {
         result = die1 + die2;
-        
+
     } else {
         result = die1 + die2;
     }
@@ -486,15 +486,14 @@ public class Main {
 
     int aDigits = Integer.toString(a).length();
 
-  
-    if (sumDigits == a)
+    if (sumDigits == aDigits) 
       return sum;
 
-    else if (sum > aDigits )
-      return a; 
-
+    else if (sumDigits > aDigits) 
+      return a;
     
-      return sum;
+
+    return sum;
   }
   
   
