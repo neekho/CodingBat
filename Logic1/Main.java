@@ -431,6 +431,30 @@ public class Main {
 
 
   // 8
+  public static int withoutDoubles(int die1, int die2, boolean noDoubles) {
+    
+    int result = 0;
+    boolean sameResult = die1 == die2;
+
+    if (sameResult && !noDoubles) {
+        result = die1 + die2;
+
+    } else if (sameResult && noDoubles) {
+        result = die1 == 6 ? die1 + 1 : die1 + 1 + die2;
+
+    } else if (!sameResult && noDoubles) {
+        result = die1 + die2;
+        
+    } else {
+        result = die1 + die2;
+    }
+
+    return result;
+
+  }
+  
+
+
 
 
   // 9
@@ -452,6 +476,27 @@ public class Main {
 
 
   }
+
+  // 10
+  public static int sumLimit(int a, int b) {
+
+    int sum = a + b;
+
+    int sumDigits = Integer.toString(sum).length();
+
+    int aDigits = Integer.toString(a).length();
+
+  
+    if (sumDigits == a)
+      return sum;
+
+    else if (sum > aDigits )
+      return a; 
+
+    
+      return sum;
+  }
+  
   
   
     
