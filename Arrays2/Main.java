@@ -55,6 +55,40 @@ public class Main {
         return !contains1 && !contains3;
         
       }
+
+
+
+      public static int[] fizzArray(int n) {
+
+        int[] result = new int[n];
+
+        if (n == 0) return result;
+
+        for (int i = 0; i < n; i++) {
+            result[i] = i;
+        }
+
+        return result;
+  
+      }
+
+      public static boolean only14(int[] nums) {
+
+        for (int number : nums) {
+            boolean is1 = number == 1;
+            boolean is4 = number == 4;
+
+            if (!is1 && !is4)
+                return false;
+
+        }
+            
+        return true;       
+
+  
+      }
+      
+      
       
     
 
@@ -77,6 +111,10 @@ public class Main {
 
         boolean no1And3A = lucky13(sum13);
         System.out.println(no1And3A);
+
+        int[] fizzbuzzArray = fizzArray(10);
+        System.out.println(Arrays.toString(fizzbuzzArray));
+
     }
 
 
