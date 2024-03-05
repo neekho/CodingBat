@@ -38,6 +38,7 @@ public class Main {
   
     }
 
+    // 3
     public static boolean lucky13(int[] nums) {
         //return true if a nums DOES NOT HAVE 1 AND 3
 
@@ -54,11 +55,11 @@ public class Main {
       
         return !contains1 && !contains3;
         
-      }
+    }
 
 
-
-      public static int[] fizzArray(int n) {
+    // 4
+    public static int[] fizzArray(int n) {
 
         int[] result = new int[n];
 
@@ -70,8 +71,60 @@ public class Main {
 
         return result;
   
-      }
+    }
 
+    // 5
+    public boolean no14(int[] nums) {
+
+        boolean containsOne = false;
+        boolean containsFour = false;
+    
+        for (int number : nums) {
+            if (number == 1) {
+                containsOne = true;
+            } else if (number == 4) {
+                containsFour = true;
+            }
+        }
+    
+        return !containsOne || !containsFour; 
+    }
+
+
+    //6
+
+    //7 
+    public boolean modThree(int[] nums) {
+        for (int i = 0; i <= nums.length - 3; i++) {
+            boolean areConsecutiveEven = nums[i] % 2 == 0 && nums[i + 1] % 2 == 0 && nums[i + 2] % 2 == 0;
+            boolean areConsecutiveOdd = nums[i] % 2 != 0 && nums[i + 1] % 2 != 0 && nums[i + 2] % 2 != 0;
+    
+            if (areConsecutiveEven || areConsecutiveOdd) {
+                return true;
+            }
+        }
+    
+        return false;
+    }
+    
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      // 2nd column
+      // 4
       public static boolean only14(int[] nums) {
 
         for (int number : nums) {

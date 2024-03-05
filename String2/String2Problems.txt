@@ -41,7 +41,16 @@
         repeatEnd("Hello", 1) → "o"
 
 
-7. public int countHi(String str) -> 
+5. 
+
+6.
+
+
+7. public String starOut(String str)
+
+
+
+8. public int countHi(String str) -> 
     Return the number of times that the string "hi" appears anywhere in the given string.
 
         countHi("abc hi ho") → 1
