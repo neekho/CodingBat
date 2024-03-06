@@ -74,10 +74,33 @@ public class Main {
   
     }
     
+
+    // 7
+    public static String starOut(String str) {
+
+        // ab*cd
+
+        int indexOfStar = str.indexOf("*");
+
+        int leftOfStar = indexOfStar - 1;
+
+        int rightOfStar = indexOfStar + 1;
+
+
+        String first = str.substring(0, leftOfStar);
+        String second = str.substring(rightOfStar + 1, str.length());
     
 
 
-    // 7
+
+        return first + second;
+  
+    }
+    
+    
+
+
+    // 8
     public static int countHi(String str) {
         int count = 0;
     
@@ -112,6 +135,9 @@ public class Main {
 
         System.out.println(repeatEnd("Hello", 3));
         System.out.println(repeatEnd("1234", 2));
+
+
+        System.out.println(starOut("ab*cd"));
 
         
     }
